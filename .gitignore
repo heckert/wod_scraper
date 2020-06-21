@@ -1,1 +1,4 @@
 .ipynb_checkpoints/*
+config.py
+recipients.py
+__pycache__/*
