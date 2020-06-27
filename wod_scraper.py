@@ -48,7 +48,7 @@ if header_week_no != current_week_no:
         now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
         print(f'{now} - NEW WORKOUTS ONLINE NOW')
 
-        ### parse relevant content from the html
+        # parse relevant content from the html
         def replace_with_newlines(element):
             '''reads html into a string and replaces <br> with newlines'''
             text = ''
@@ -95,7 +95,7 @@ if header_week_no != current_week_no:
                 }
 
 
-            ### extract workout infos into string
+            # extract workout infos into string
             mail_content = ""
 
             for day, exercises in workouts.items():
@@ -118,7 +118,7 @@ if header_week_no != current_week_no:
             print(f'{now} - ERROR PARSING CONTENT - {type(ex)} {ex}')
 
 
-        ### send mail
+        # send mail
         try:
             msg = EmailMessage()
             msg.set_content(mail_content)
