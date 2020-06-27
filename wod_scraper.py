@@ -43,12 +43,10 @@ if os.path.isfile(sent_mails_log):
         not_yet_sent = False
 
 
-
 if header_week_no != current_week_no:
     if not_yet_sent:
         now = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
         print(f'{now} - NEW WORKOUTS ONLINE NOW')
-
 
         ### parse relevant content from the html
         def replace_with_newlines(element):

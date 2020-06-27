@@ -5,8 +5,8 @@ This script scrapes their website, checks the week number of the header and send
 
 ## Website view
 This is how the workout schedule looks on my gyms website. (I did of course not create the website, this project revolves around parsing its content)
-![alt text](screenshot_website.png "Workout overview on my gym's website")
+<img src="screenshot_website.png" width="400">
 
 ## E-Mail
-This is what the text of the generated e-mail notification looks like
-![alt text](screenshot_mail.png "Parsed content in the e-mail notification")
+This is what the text of the generated e-mail notification looks like:
+<img src="screenshot_mail.png " width="400">
