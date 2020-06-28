@@ -1,8 +1,6 @@
 import os
 import requests
 import urllib.request
-import time
-
 import smtplib
 
 from bs4 import BeautifulSoup
@@ -19,7 +17,6 @@ sent_mails_log = log_path + 'sent_mails.csv'
 # Get HTML
 response = requests.get(url)
 soup = BeautifulSoup(response.text, 'html.parser')
-
 
 # Get current week no. & week no. on website
 h1 = soup.find('h1')
@@ -61,7 +58,6 @@ if header_week_no != current_week_no:
                     text += '\n'
             return text
 
-
         days = ["montag", "dienstag", "mittwoch", "donnerstag", "freitag", "samstag", "sonntag"]
         workouts = {}
 
@@ -94,9 +90,8 @@ if header_week_no != current_week_no:
                     'ENDURANCE': endurance
                 }
 
-
             # extract workout infos into string
-            mail_content = ""
+            mail_content = ''
 
             for day, exercises in workouts.items():
                 mail_content += day
@@ -140,7 +135,9 @@ if header_week_no != current_week_no:
             # create `logs` dir if it does not exist
             if not os.path.isdir('logs'):
                 os.mkdir('logs')
-                # create logs.csv with headers
+
+            # create logs.csv with headers
+            if not os.path.isfile(sent_mails_log):
                 with open(sent_mails_log, 'w+') as f:
                     f.write('date,recipients\n')
 
