@@ -11,7 +11,7 @@ from recipients import recipients
 from config import pw, url, sender
 
 # Initialize log location
-log_path = 'logs/'
+log_path = '/home/pi/Documents/wod_scraper/logs/'
 sent_mails_log = log_path + 'sent_mails.csv'
 
 # Get HTML
